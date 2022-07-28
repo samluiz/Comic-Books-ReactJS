@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import ComicDetail from './Components/ComicDetail'
 import Comics from './Components/Comics'
 import Header from './Components/Header'
 import Main from './Components/Main'
@@ -22,7 +21,6 @@ const App: React.FC<IProps> = ({
 }) => {
     return (
         <>
-            <ComicDetail showModal={showModal} isModalActive={isModalActive} />
             <Header />
             <Slider />
             <Main itemsPerPage={itemsPerPage} totalItems={totalItems} />

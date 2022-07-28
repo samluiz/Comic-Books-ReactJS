@@ -1,5 +1,4 @@
 import React from 'react'
-import ComicDetail from '../ComicDetail'
 import Comics from '../Comics'
 import Pagination from '../Pagination'
 

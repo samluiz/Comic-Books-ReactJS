@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
 import Tilt from 'react-parallax-tilt'
-import ComicDetail from '../ComicDetail'
 import Generic from '/public/img/marvelcomic.jpg'
 import ReactLoading from 'react-loading'
 
@@ -45,16 +44,6 @@ const Comics: React.FC = () => {
 
     const [isModalActive, setIsModalActive] = useState(false)
 
-    function showModal() {
-        if (isModalActive === false) {
-            setIsModalActive(true)
-        } else {
-            setIsModalActive(false)
-        }
-
-        console.log(isModalActive)
-    }
-
     if (loading) {
         return (
             <div className="grid place-items-center p-6">
@@ -64,9 +53,6 @@ const Comics: React.FC = () => {
     }
     return (
         <>
-            {isModalActive ? (
-                <ComicDetail showModal={showModal} isModalActive />
-            ) : null}
             <ul className=" flex justify-around items-center flex-row flex-wrap p-4 m-6 mt-20">
                 {currentItems.map((comic) => {
                     let path = comic.thumbnail.path
@@ -87,7 +73,6 @@ const Comics: React.FC = () => {
                                                 }`}
                                                 alt="Thumbnail"
                                                 className=" cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 duration-150 rounded max-w-sm max-h-72 -z-50"
-                                                onClick={showModal}
                                             />
                                         </Tilt>
 
