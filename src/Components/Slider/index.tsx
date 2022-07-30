@@ -33,7 +33,7 @@ const Slider: React.FC = () => {
                     <p>Heroes in Black</p>
                 </div>
                 <div className="bg-black">
-                    <img src={Moon} alt="" className=" opacity-40" />
+                    <img src={Moon} alt="" className=" saturate-0 opacity-40" />
                     <p>Black in Heroes</p>
                 </div>
             </Carousel>

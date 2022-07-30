@@ -1,21 +1,15 @@
 import React from 'react'
 import Comics from '../Comics'
-import Pagination from '../Pagination'
 
-interface IProps {
-    itemsPerPage: number
-    totalItems: number
-}
+interface IProps {}
 
-const Main: React.FC<IProps> = ({ itemsPerPage, totalItems }) => {
+const Main: React.FC<IProps> = ({}) => {
     return (
         <>
-            <main className=" ">
-                <Comics />
-                <Pagination
-                    itemsPerPage={itemsPerPage}
-                    totalItems={totalItems}
-                />
+            <main className=" grid place-items-center ">
+                <div className=" max-w-[90rem] grid place-items-center">
+                    <Comics />
+                </div>
             </main>
         </>
     )
