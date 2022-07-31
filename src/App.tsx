@@ -2,28 +2,15 @@ import React, { useEffect } from 'react'
 import Comics from './Components/Comics'
 import Header from './Components/Header'
 import Main from './Components/Main'
-import Pagination from './Components/Pagination'
 import Slider from './Components/Slider'
 
-interface IProps {
-    showModal: () => void
-    isModalActive: boolean
-    itemsPerPage: number
-    totalItems: number
-    comics: []
-}
-
-const App: React.FC<IProps> = ({
-    showModal,
-    isModalActive,
-    itemsPerPage,
-    totalItems,
+const App: React.FC = ({
 }) => {
     return (
         <>
             <Header />
             <Slider />
-            <Main itemsPerPage={itemsPerPage} totalItems={totalItems} />
+            <Main />
         </>
     )
 }
